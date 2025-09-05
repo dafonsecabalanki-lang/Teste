@@ -10,7 +10,7 @@ body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     line-height: 1.6;
     color: #333333;
-    background-color: #F7F2D9;
+    background-color: #FFFFFF;
     padding-top: 80px;
 }
 
@@ -66,9 +66,14 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Evita layout shift com dimensões explícitas e lazy no conteúdo não crítico */
+img[loading="lazy"] {
+    content-visibility: auto;
+}
+
 .tagline {
     padding: 5px 0 15px 0;
-    background: #F7F2D9;
+    background: #FFFFFF;
 }
 
 .tagline p {
@@ -141,7 +146,7 @@ ul {
     border: 1px solid #eee;
     border-radius: 8px;
     padding: 20px;
-    background: #F7F2D9;
+    background: #FAFAFA;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -150,7 +155,36 @@ ul {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Ações e botões */
+.actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+.btn-whatsapp {
+    background: #25D366;
+    color: #000;
+}
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+    background: #1ebe57;
+    color: #000;
+}
+
 /* Contato */
+.contato {
+    background: #FAFAFA;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+}
 .contato p {
     margin-bottom: 10px;
     color: #333333;
@@ -194,7 +228,7 @@ ul {
 
 /* Rodapé */
 footer {
-    background: linear-gradient(90deg, #D9B84A, #F7F2D9);
+    background: linear-gradient(90deg, #D9B84A, #FFFFFF);
     color: #000;
     text-align: center;
     padding: 15px;
